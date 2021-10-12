@@ -10,6 +10,6 @@
     > ![](https://github.com/mesleki2017/flask-projem/blob/5551c0042297b644b49b655b6288d508db5eee2a/resimler/virtualenv2.png)
 -  ```pip install -r requirements.txt ``` komutu ile requirements.txt dosyasındaki kütüphaneleri yükledim
 - github repositorie oluşturdum
-    > ![]()
+    > ![](https://github.com/mesleki2017/flask-projem/blob/1dfd5abe11552acde1cc9a6237eb0e9220ec66a4/resimler/github1.png)
 
 
