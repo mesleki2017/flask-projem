@@ -9,5 +9,7 @@
 - activate komutunu kullanmak yerine activate1.py kodunu çalıştırdım ve .venv i aktive etmiş oldum
     > ![](https://github.com/mesleki2017/flask-projem/blob/5551c0042297b644b49b655b6288d508db5eee2a/resimler/virtualenv2.png)
 -  ```pip install -r requirements.txt ``` komutu ile requirements.txt dosyasındaki kütüphaneleri yükledim
+- github repositorie oluşturdum
+    > ![]()
 
 
