@@ -23,7 +23,10 @@
 ## Demo amaçlı chart.js kullanmı 
 - ![](https://github.com/mesleki2017/flask-projem/blob/6ea5f45e985925c9ba07dc44d5e7d05b756310da/resimler/chartjs-1.png)
 
-
+- ```javascript 
+    <script src="{{url_for('static', filename='/libraries/Chart.min.js')}}"></script>
+    ````
+    > grafik için kullanacağım kütüphane yi index.html ekledim
 
 
 

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<script src="{{url_for('static', filename='/libraries/socket.io.min.js')}}"></script>
+
 <script src="{{url_for('static', filename='/libraries/Chart.min.js')}}"></script>
 
 <script src="{{url_for('static', filename='/javascript/grafik1.js')}}"></script>
@@ -85,7 +85,7 @@ if (data2["x"].length >10){
 
 // 100ms de bir tekrarlanir
 setInterval(function(){
-  
+
 sanal_data_olustur();
 grafik1js_data1_guncelle();
 grafik1js_data2_guncelle()
