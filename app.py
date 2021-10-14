@@ -3,12 +3,17 @@ from geventwebsocket.handler import WebSocketHandler
 from gevent.pywsgi import WSGIServer
 from flask import Flask, request, render_template
 import math
+import random
 import threading
 
-sanal_data={
+datam1={
     "x":0,
     "y":0
 }
+
+def sanal_data(data):
+    data["x"]=data["x"]+1
+    data["y"]=math.sin(data["x"])
 
 
 
@@ -17,13 +22,12 @@ app.config['SECRET_KEY'] = 'vnkdjnfjknfl1232#'
 
 socketio = SocketIO(app)
 
-def thread1():
-    threading.Timer(0.5,thread1).start()
-    sanal_data["x"]=sanal_data["x"]+1
-    sanal_data["y"]=math.sin(sanal_data["x"])
-    socketio.emit('server_data', sanal_data)
-
-thread1()
+def thread1(data):
+    threading.Timer(0.1,thread1,[data]).start()
+    sanal_data(data)
+    socketio.emit('server_data', data)
+    
+thread1(datam1)
 
 @app.route('/')#decorator
 def sessions():
