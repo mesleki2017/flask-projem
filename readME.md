@@ -18,7 +18,7 @@
 - css içinde style1.css oluşturuldu
 - javascript içinde grafik1.js oluşturuldu
 - libraries içine kullanacağım javascipt kütüphaneleri eklendi
-    >[](https://github.com/mesleki2017/flask-projem/blob/9a5e1d25436a6543101e8525ddba9bffae8be256/resimler/static-templates-1.png)
+    > ![](https://github.com/mesleki2017/flask-projem/blob/9a5e1d25436a6543101e8525ddba9bffae8be256/resimler/static-templates-1.png)
 
 
 
