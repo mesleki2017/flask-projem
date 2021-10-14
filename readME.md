@@ -27,6 +27,14 @@
     <script src="{{url_for('static', filename='/libraries/Chart.min.js')}}"></script>
     ````
     > grafik için kullanacağım kütüphane yi index.html ekledim
-
+- ```javascript
+    <script src="{{url_for('static', filename='/javascript/grafik1.js')}}"></script>
+    ```
+    > grafik1.js te oluşturacağım 2 grafigin datalarını ve options larını belirledim
+    ve index.html çektim
+- ```javascript
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/style1.css')}}"> 
+    ```
+    > index.html deki html kodun style bilgilerini style.1css dsoyasında belirledim
 
 
