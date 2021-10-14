@@ -36,5 +36,28 @@
     <link rel="stylesheet" href="{{url_for('static', filename='/css/style1.css')}}"> 
     ```
     > index.html deki html kodun style bilgilerini style.1css dosyasında belirledim
+- ```html 
+    <div class="flex-container">
+        <div class="div1">
+            <span>Temel Görünüm</span>
+        </div>
+        <div class="div2">
+            <span>1. Grafik</span>
+        </div>
+        <div class="div3">
+            <span>2. Grafik</span>
+         </div>
+        <div  class="div4">
+            <canvas id="grafik1" class="can1" ></canvas>
+        </div>
+        <div class="div5">
+            <canvas id="grafik2" class="can2" ></canvas>
+        </div>
+    </div>
+    ```
+    > html de style olarak flex kullancağım
+        > o yüzden bir flex-container lı div olusturup diger 5 div onun içine yazdım
+        div class ismi illaki flex-container olmak zorunda degil önemli olan css te 
+        ***display: flex*** kodunu ilgili class a atamak
 
 
