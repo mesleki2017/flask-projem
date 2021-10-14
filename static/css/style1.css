@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial;
+    margin: 0;
+  }
+
+.flex-container
+{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 3px;
+    height: 200px;
+}
+
+
+.div1{
+    flex: 100%;
+    background: linear-gradient(to bottom, #4678F3, #64D6EE);
+    font-size: 3vmax;
+    text-shadow:1px 1px 1px rgba(255,255,255,.8);
+    color:rgb(114, 114, 114);
+}
+
+.div2{
+    flex: 50%;
+    background: #4678F3;
+    font-size: 30px;
+    margin-top: 10px;
+    
+}
+.div3{
+    flex: 50%;
+    background: rgb(14, 173, 8);
+    font-size: 30px;
+    margin-top: 10px;
+    
+}
+
+.div4{
+    flex: 50%;
+}
+.div5{
+    flex: 50%;
+}
+
+.can1{
+    background: rgb(221, 233, 115);
+    max-height: 400px;  
+}
+
+.can2{
+    background: rgb(234, 236, 217);
+    max-height: 400px;  
+}
