@@ -12,7 +12,14 @@
 - github repositorie oluşturdum
     > ![](https://github.com/mesleki2017/flask-projem/blob/1dfd5abe11552acde1cc9a6237eb0e9220ec66a4/resimler/github1.png)
 
-## Temel Proje klasör ve kütüphaneler eklendi
+## Temel Proje klasör ve kütüphaneler
+- static klasörü oluşturuldu
+- static klasörü içinde css javascript ve libraries klasörleri oluşturuldu
+- css içinde style1.css oluşturuldu
+- javascript içinde grafik1.js oluşturuldu
+- libraries içine kullanacağım javascipt kütüphaneleri eklendi
+    >[](https://github.com/mesleki2017/flask-projem/blob/9a5e1d25436a6543101e8525ddba9bffae8be256/resimler/static-templates-1.png)
+
 
 
 
