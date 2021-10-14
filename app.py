@@ -29,6 +29,7 @@ def thread1(data):
     
 thread1(datam1)
 
+
 @app.route('/')#decorator
 def sessions():
     #flask server calistiginda server adresinde bu sayfa acilir
