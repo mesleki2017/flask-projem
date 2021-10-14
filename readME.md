@@ -74,4 +74,31 @@
     - myChart1 ise sadece update te kullanılmak için var.
     - chart1_data ve chart1_options ise grafik1.js içinde tanımlı. Kod daha düzenli olsun
     diye grafik1.js i oluşturdum
+    - ```javascript 
+        function sanal_data_olustur(){
+            xxx=xxx+1;
+            yyy=Math.sin(xxx)//grafik1 icin
+            zzz=Math.cos(xxx)//grafik2 icin
+        }
+         ```
+         > grafik icin sanal veri
+    - ```javascript
+        function grafik1js_data1_guncelle(){
+            data1["x"].push(xxx);
+            data1["y"].push(yyy);
+
+            if (data1["x"].length >10){
+                data1["x"].shift();
+                data1["y"].shift();
+                }
+        }
+        ```
+        > grafik1.js te tanımlı data1 listesine sanal veriyi eklemek ve 10 data dan sonra eski olan
+        ları silmek için fonksiyon
+    - ```javascript
+        setInterval(function(){} , 100 );
+        ```
+        > 100 ms de bir ***setInterval*** içinde sanak veriyi ve grafik datayı güncellemek
+        ve ***myChart1.update()*** ile grafik çizimini yenilemek
+
 
