@@ -60,5 +60,6 @@
     div class ismi illaki flex-container olmak zorunda degil önemli olan css te 
     ***display: flex*** kodunu ilgili class a atamak
 - html de grafik1 ve grafik2 için 2 tane canvas olusturdum
-    - ```html <canvas id="grafik1" class="can1" ></canvas> ```
+    - ```html 
+        <canvas id="grafik1" class="can1" ></canvas> ```
 
