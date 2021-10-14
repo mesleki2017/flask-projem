@@ -21,7 +21,7 @@
     > ![](https://github.com/mesleki2017/flask-projem/blob/9a5e1d25436a6543101e8525ddba9bffae8be256/resimler/static-templates-1.png)
 
 ## Demo amaçlı chart.js kullanmı 
-- 
+- ![][https://github.com/mesleki2017/flask-projem/blob/6ea5f45e985925c9ba07dc44d5e7d05b756310da/resimler/chartjs-1.png]
 
 
 
