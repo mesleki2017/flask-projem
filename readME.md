@@ -35,6 +35,6 @@
 - ```javascript
     <link rel="stylesheet" href="{{url_for('static', filename='/css/style1.css')}}"> 
     ```
-    > index.html deki html kodun style bilgilerini style.1css dsoyasında belirledim
+    > index.html deki html kodun style bilgilerini style.1css dosyasında belirledim
 
 
