@@ -13,7 +13,6 @@
     justify-content: space-between;
     text-align: center;
     border-radius: 3px;
-    height: 200px;
 }
 
 
@@ -26,7 +25,7 @@
 }
 
 .div2{
-    flex: 50%;
+    flex: 100%;
     background: #4678F3;
     font-size: 30px;
     margin-top: 10px;
@@ -34,25 +33,16 @@
 }
 .div3{
     flex: 50%;
-    background: rgb(14, 173, 8);
+
     font-size: 30px;
     margin-top: 10px;
+    height: 400px;
+    width: 400px;
     
-}
-
-.div4{
-    flex: 50%;
-}
-.div5{
-    flex: 50%;
 }
 
 .can1{
     background: rgb(221, 233, 115);
-    max-height: 400px;  
+  
 }
 
-.can2{
-    background: rgb(234, 236, 217);
-    max-height: 400px;  
-}

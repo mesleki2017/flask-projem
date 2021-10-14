@@ -8,7 +8,7 @@
 </head>
 
 <script src="{{url_for('static', filename='/libraries/Chart.min.js')}}"></script>
-
+<script src="{{url_for('static', filename='/libraries/socket.io.min.js')}}"></script>
 <script src="{{url_for('static', filename='/javascript/grafik1.js')}}"></script>
 <link rel="stylesheet" href="{{url_for('static', filename='/css/style1.css')}}">
 
@@ -19,20 +19,18 @@
     <span>Temel Görünüm</span>
   </div>
   <div class="div2">
-    <span>1. Grafik</span>
+    <span> Grafik</span>
+  </div>
   </div>
   <div class="div3">
-    <span>2. Grafik</span>
-  </div>
-  <div class="div4">
     <canvas id="grafik1" class="can1" ></canvas>
   </div>
-  <div class="div5">
-    <canvas id="grafik2" class="can2" ></canvas>
-  </div>
+
 </div> 
 
 <script>
+var socket = io.connect('http://' + document.domain + ':' + location.port);
+
 
 // chart1_data ve chart1_options grafik1.js ten geliyor
 let myChart1=new Chart("grafik1", {
@@ -41,29 +39,11 @@ let myChart1=new Chart("grafik1", {
     options: chart1_options 
   });
 
-// chart2_data ve chart2_options grafik1.js ten geliyor
-let myChart2=new Chart("grafik2", {
-    type: "line",
-    data: chart2_data,
-    options:chart2_options 
-  });
 
-
-var xxx=0;
-var yyy=0;
-var zzz=0;
-
-function sanal_data_olustur(){
-// grafik cizmek icin sanal data olusturuyorum
-xxx=xxx+1;
-yyy=Math.sin(xxx)//grafik1 icin
-zzz=Math.cos(xxx)//grafik2 icin
-}
-
-function grafik1js_data1_guncelle(){
+function grafik1js_data1_guncelle(x1,y1){
 // data1  grafik.js ten geliyor
-data1["x"].push(xxx);
-data1["y"].push(yyy);
+data1["x"].push(x1);
+data1["y"].push(y1);
 
 if (data1["x"].length >10){
     data1["x"].shift();
@@ -71,29 +51,13 @@ if (data1["x"].length >10){
                 }
 }
 
-function grafik1js_data2_guncelle(){
-// data2  grafik.js ten geliyor
-data2["x"].push(xxx);
-data2["y"].push(zzz);
 
-if (data2["x"].length >10){
-    data2["x"].shift();
-    data2["y"].shift();
-                }
-}
+socket.on( 'server_data', function(data) {
+    grafik1js_data1_guncelle(data["x"],data["y"])
+    myChart1.update();
+    } );
 
 
-// 100ms de bir tekrarlanir
-setInterval(function(){
-
-sanal_data_olustur();
-grafik1js_data1_guncelle();
-grafik1js_data2_guncelle()
-
-myChart1.update();
-myChart2.update();
-
-     } , 100 );
 
 
 </script>
