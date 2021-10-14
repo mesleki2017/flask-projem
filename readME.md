@@ -56,8 +56,8 @@
     </div>
     ```
     > html de style olarak flex kullancağım
-        > o yüzden bir flex-container lı div olusturup diger 5 div onun içine yazdım
-        div class ismi illaki flex-container olmak zorunda degil önemli olan css te 
-        ***display: flex*** kodunu ilgili class a atamak
+    > o yüzden bir flex-container lı div olusturup diger 5 div onun içine yazdım
+    div class ismi illaki flex-container olmak zorunda degil önemli olan css te 
+    ***display: flex*** kodunu ilgili class a atamak
 
 
