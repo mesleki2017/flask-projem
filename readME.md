@@ -12,4 +12,8 @@
 - github repositorie oluşturdum
     > ![](https://github.com/mesleki2017/flask-projem/blob/1dfd5abe11552acde1cc9a6237eb0e9220ec66a4/resimler/github1.png)
 
+## Temel Proje klasör ve kütüphaneler eklendi
+
+
+
 
