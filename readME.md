@@ -98,7 +98,7 @@
     - ```javascript
         setInterval(function(){} , 100 );
         ```
-        > 100 ms de bir ***setInterval*** içinde sanak veriyi ve grafik datayı güncellemek
+        > 100 ms de bir ***setInterval*** içinde sanal veriyi ve grafik datayı güncellemek
         ve ***myChart1.update()*** ile grafik çizimini yenilemek
 
 
