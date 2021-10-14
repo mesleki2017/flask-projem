@@ -62,4 +62,16 @@
 - html de grafik1 ve grafik2 için 2 tane canvas olusturdum
     - ```html 
         <canvas id="grafik1" class="can1" ></canvas> ```
+- script kısmında
+    - ```javascript 
+        let myChart1=new Chart("grafik1", {
+        type: "line",
+        data: chart1_data,
+        options: chart1_options 
+        });
+         ```
+    - grafik1 ismini  hem canvasta hem chart object oluşturmakta kullandım
+    - myChart1 ise sadece update te kullanılmak için var.
+    - chart1_data ve chart1_options ise grafik1.js içinde tanımlı. Kod daha düzenli olsun
+    diye grafik1.js i oluşturdum
 
