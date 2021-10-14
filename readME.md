@@ -96,7 +96,11 @@
         > grafik1.js te tanımlı data1 listesine sanal veriyi eklemek ve 10 data dan sonra eski olan
         ları silmek için fonksiyon
     - ```javascript
-        setInterval(function(){} , 100 );
+        setInterval(function(){
+            sanal_data_olustur();
+            grafik1js_data1_guncelle();
+            myChart1.update();
+        } , 100 );
         ```
         > 100 ms de bir ***setInterval*** içinde sanal veriyi ve grafik datayı güncellemek
         ve ***myChart1.update()*** ile grafik çizimini yenilemek
