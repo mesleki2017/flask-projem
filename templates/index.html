@@ -7,10 +7,9 @@
   <title>Document</title>
 </head>
 
-<script src="{{url_for('static', filename='/libraries/Chart.min.js')}}"></script>
-<script src="{{url_for('static', filename='/libraries/socket.io.min.js')}}"></script>
-<script src="{{url_for('static', filename='/javascript/grafik1.js')}}"></script>
-<link rel="stylesheet" href="{{url_for('static', filename='/css/style1.css')}}">
+<script src="{{url_for('static', path='libraries/Chart.min.js')}}"></script>
+<script src="{{url_for('static', path='javascript/grafik1.js')}}"></script>
+<script src="{{url_for('static', path='css/style1.js')}}"></script>
 
 <body>
 
@@ -29,7 +28,7 @@
 </div> 
 
 <script>
-var socket = io.connect('http://' + document.domain + ':' + location.port);
+
 
 
 // chart1_data ve chart1_options grafik1.js ten geliyor
@@ -45,19 +44,21 @@ function grafik1js_data1_guncelle(x1,y1){
 data1["x"].push(x1);
 data1["y"].push(y1);
 
-if (data1["x"].length >10){
+if (data1["x"].length >100){
     data1["x"].shift();
     data1["y"].shift();
                 }
 }
 
 
-socket.on( 'server_data', function(data) {
-    grafik1js_data1_guncelle(data["x"],data["y"])
-    myChart1.update();
-    } );
 
 
+const ws = new WebSocket("ws://127.0.0.1:8000/ws"); 
+
+ws.onmessage = function(event) {
+  grafik1js_data1_guncelle(event.data["x"],event.data["y"])
+  myChart1.update()
+} 
 
 
 </script>
