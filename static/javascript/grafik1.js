@@ -5,7 +5,7 @@ chart1_data= {
       labels: data1["x"],
       datasets: [{
         label :"sin",
-        pointRadius: 4,
+        pointRadius: 1,
         pointBackgroundColor: "rgb(0,0,255)",
         data: data1["y"]
       }]
