@@ -2,4 +2,4 @@
 
 master da sadece chart.js kullanımı amaçlı frontend teki datanın grafiğini çizdiren bir uygulama yaptık
 
-## websocket branch ında ise sanal data backend de oluşturulacak
+## websocket branch ında ise sanal data backend de oluşturulacak ve frontend gönderilecek
