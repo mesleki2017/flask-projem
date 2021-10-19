@@ -10,8 +10,10 @@ import uvicorn
 from pathlib import Path
 import numpy as np
 import math
+import time
 
 
+start = time.time()
 
 datam1={
     "x":0,
@@ -19,8 +21,12 @@ datam1={
 }
 
 def sanal_data(data):
-    data["x"]=data["x"]+1
-    data["y"]=math.sin(data["x"])
+    
+    frekans=10
+    data["x"]=time.time() - start
+    data["y"]=math.sin((2*math.pi*frekans)*data["x"])
+
+   
 
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
@@ -38,8 +44,9 @@ async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     while True:
         sanal_data(datam1)
-        await asyncio.sleep(0.1)
+        await asyncio.sleep(0.00001)
         await websocket.send_json(datam1)
+
 
 if __name__ == '__main__':
     uvicorn.run(app)

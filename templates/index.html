@@ -9,7 +9,8 @@
 
 <script src="{{url_for('static', path='libraries/Chart.min.js')}}"></script>
 <script src="{{url_for('static', path='javascript/grafik1.js')}}"></script>
-<script src="{{url_for('static', path='css/style1.js')}}"></script>
+
+<link rel="stylesheet" href="{{url_for('static', path='css/style1.css')}}">
 
 <body>
 
@@ -44,7 +45,7 @@ function grafik1js_data1_guncelle(x1,y1){
 data1["x"].push(x1);
 data1["y"].push(y1);
 
-if (data1["x"].length >100){
+if (data1["x"].length >2000){
     data1["x"].shift();
     data1["y"].shift();
                 }
@@ -56,7 +57,9 @@ if (data1["x"].length >100){
 const ws = new WebSocket("ws://127.0.0.1:8000/ws"); 
 
 ws.onmessage = function(event) {
-  grafik1js_data1_guncelle(event.data["x"],event.data["y"])
+  const data1 = JSON.parse(event.data);
+
+  grafik1js_data1_guncelle(data1["x"],data1["y"])
   myChart1.update()
 } 
 
